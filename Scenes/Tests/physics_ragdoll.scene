@@ -1,15 +1,16 @@
 {
-  "Id": "c2ba7b73-6ad3-4504-b07b-3643bb3e8994",
+  "__guid": "c2ba7b73-6ad3-4504-b07b-3643bb3e8994",
   "GameObjects": [
     {
-      "Id": "bea4636e-9e5b-485c-92d2-5214c73bf212",
+      "__guid": "bea4636e-9e5b-485c-92d2-5214c73bf212",
       "Name": "Object",
       "Position": "1114.846,0,-1303.217",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "EnvmapProbe",
-          "__enabled": true,
+          "__guid": "9acd25ce-6359-4719-b174-c7a6b362dfe6",
           "Bounds": {},
           "Feathering": 0.02,
           "Projection": "Box",
@@ -19,18 +20,18 @@
       ]
     },
     {
-      "Id": "52117bd2-8020-4fa0-b23a-903ed1473301",
+      "__guid": "52117bd2-8020-4fa0-b23a-903ed1473301",
       "Name": "Surface",
       "Position": "906.3349,0,-1631.205",
       "Rotation": "0,-0.01919759,0,0.9998158",
       "Scale": "10,10,10",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__enabled": true,
+          "__guid": "de8ed6d8-068d-400a-9c1e-f6a39af5768b",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/plane.vmdl",
           "RenderType": "On",
@@ -39,34 +40,38 @@
       ],
       "Children": [
         {
-          "Id": "23c65f4f-bf21-4481-9e94-de77804161b5",
+          "__guid": "23c65f4f-bf21-4481-9e94-de77804161b5",
           "Name": "Surface (1)",
           "Position": "0,0,-25",
           "Enabled": true,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "BoxCollider",
-              "__enabled": true,
+              "__guid": "5064ff58-1c25-49c4-8be0-bc4115244e94",
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "100,100,50",
-              "Static": true,
-              "Surface": null
+              "Static": true
             }
           ]
         }
       ]
     },
     {
-      "Id": "726c5e3b-7d44-4394-9b3a-cbb29401c7fc",
+      "__guid": "726c5e3b-7d44-4394-9b3a-cbb29401c7fc",
       "Name": "Directional Light",
       "Position": "55.4718,-124.3322,91.5952",
       "Rotation": "-0.5276809,0.09922918,0.8290949,0.1559103",
+      "Tags": "light_directional,light",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "DirectionalLight",
-          "__enabled": true,
+          "__guid": "7bd9161c-1550-4033-99c5-de4a68f5bf46",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
           "LightColor": "0.92574,0.79106,0.68743,1",
           "Shadows": true,
           "SkyColor": "0.14356,0.14356,0.14356,1"
@@ -74,15 +79,16 @@
       ]
     },
     {
-      "Id": "7c163f9b-273d-41e8-91d6-9f096d02854b",
+      "__guid": "7c163f9b-273d-41e8-91d6-9f096d02854b",
       "Name": "Camera",
       "Position": "1011.863,273.6311,-1540.558",
       "Rotation": "0.104912,0.06145444,-0.8564602,0.5016899",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "CameraComponent",
-          "__enabled": true,
+          "__guid": "bf2080c3-36fd-48e9-a699-9f4156415ca4",
           "BackgroundColor": "0.25292,0.26086,0.29703,1",
           "ClearFlags": "All",
           "FieldOfView": 85.5,
@@ -99,6 +105,7 @@
         },
         {
           "__type": "CameraPhysicsDebug",
+          "__guid": "fef74459-5e5a-4fa8-b6c0-f16cda00bf8f",
           "__enabled": false,
           "Hitboxes": false,
           "MaxPoints": 10000,
@@ -108,7 +115,7 @@
         },
         {
           "__type": "Tonemapping",
-          "__enabled": true,
+          "__guid": "80add894-cfc6-47e2-a412-9a41e9b49cf3",
           "ExposureCompensation": -1,
           "MaximumExposure": 2,
           "MinimumExposure": 1,
@@ -116,7 +123,7 @@
         },
         {
           "__type": "Bloom",
-          "__enabled": true,
+          "__guid": "171ac411-f664-4997-a9a3-b70021a11ed5",
           "BloomColor": {
             "color": [
               {
@@ -126,7 +133,8 @@
                 "t": 1,
                 "c": "1,1,1,1"
               }
-            ]
+            ],
+            "alpha": []
           },
           "BloomCurve": [
             {
@@ -145,74 +153,80 @@
       ]
     },
     {
-      "Id": "dc7e2c50-ebbc-4cf8-a98f-0b3918dcd4cd",
+      "__guid": "dc7e2c50-ebbc-4cf8-a98f-0b3918dcd4cd",
       "Name": "Citizen - Solid",
       "Position": "953.007,104.095,-1616.6",
       "Rotation": "0.0000000384625,-0.00000000000000003364402,0.6452936,0.7639344",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__enabled": true,
+          "__guid": "4d30bf0a-dac5-4492-9abd-0375d6fcfc05",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "ModelCollider",
-          "__enabled": true,
+          "__guid": "b2a0d1e9-2a91-4639-aa4f-1f35d7cf3b56",
           "IsTrigger": false,
           "Model": "models/citizen/citizen.vmdl",
-          "Static": false,
-          "Surface": null
+          "Static": false
         }
       ]
     },
     {
-      "Id": "be2267ea-ef4e-459e-becc-0da1308f9da3",
+      "__guid": "be2267ea-ef4e-459e-becc-0da1308f9da3",
       "Name": "Citizen - Ragdoll",
       "Position": "1038.492,2.851755,-1616.6",
       "Rotation": "0.06848874,-0.08108071,0.6416487,0.7596195",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "SkinnedModelRenderer",
-          "__enabled": true,
+          "__guid": "ca597d0d-ef47-435f-820e-888a548d0447",
           "BodyGroups": 18446744073709551611,
-          "BoneMergeTarget": null,
           "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "ModelPhysics",
-          "__enabled": true,
+          "__guid": "631d00a8-aaa4-4646-9a2e-6a19178bad7e",
           "Locking": {},
           "Model": "models/citizen/citizen.vmdl",
-          "Renderer": "be2267ea-ef4e-459e-becc-0da1308f9da3"
+          "Renderer": {
+            "_type": "component",
+            "component_id": "ca597d0d-ef47-435f-820e-888a548d0447",
+            "go": "be2267ea-ef4e-459e-becc-0da1308f9da3",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RigidbodyFlags": 0
         }
       ],
       "Children": [
         {
-          "Id": "9b0b742e-172c-4c3b-ad61-d4549bcbff6f",
+          "__guid": "9b0b742e-172c-4c3b-ad61-d4549bcbff6f",
           "Name": "hat",
           "Position": "-0.00004196167,-67.75481,0.000003981658",
           "Enabled": true,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "SkinnedModelRenderer",
-              "__enabled": true,
+              "__guid": "0cddecda-955b-4089-b319-f8b36ba44494",
               "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "be2267ea-ef4e-459e-becc-0da1308f9da3",
+              "BoneMergeTarget": {
+                "_type": "component",
+                "component_id": "ca597d0d-ef47-435f-820e-888a548d0447",
+                "go": "be2267ea-ef4e-459e-becc-0da1308f9da3",
+                "component_type": "SkinnedModelRenderer"
+              },
               "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/citizen_clothes/hat/beanie/models/beanie_green.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
@@ -220,19 +234,23 @@
           ]
         },
         {
-          "Id": "1315bc7e-1892-4ccb-93fb-8d573f22e854",
+          "__guid": "1315bc7e-1892-4ccb-93fb-8d573f22e854",
           "Name": "dress",
           "Position": "-0.0001020432,-67.75481,0.000003981661",
           "Enabled": true,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "SkinnedModelRenderer",
-              "__enabled": true,
+              "__guid": "2c265403-7feb-4ff3-aca9-413da5e652a4",
               "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "be2267ea-ef4e-459e-becc-0da1308f9da3",
+              "BoneMergeTarget": {
+                "_type": "component",
+                "component_id": "ca597d0d-ef47-435f-820e-888a548d0447",
+                "go": "be2267ea-ef4e-459e-becc-0da1308f9da3",
+                "component_type": "SkinnedModelRenderer"
+              },
               "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/citizen_clothes/dress/dotted_dress/models/dotted_dress.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
@@ -240,20 +258,24 @@
           ]
         },
         {
-          "Id": "58ac60fe-9ffe-43c2-adec-569b7b5f1274",
+          "__guid": "58ac60fe-9ffe-43c2-adec-569b7b5f1274",
           "Name": "lashes",
           "Position": "-328.7657,854.03,1616.6",
           "Rotation": "-0.00000003846252,0.00000000000000003364404,-0.6452939,0.7639347",
           "Enabled": true,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "SkinnedModelRenderer",
-              "__enabled": true,
+              "__guid": "509edcb1-40f0-4657-a89b-7e69b0d98ebe",
               "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "be2267ea-ef4e-459e-becc-0da1308f9da3",
+              "BoneMergeTarget": {
+                "_type": "component",
+                "component_id": "ca597d0d-ef47-435f-820e-888a548d0447",
+                "go": "be2267ea-ef4e-459e-becc-0da1308f9da3",
+                "component_type": "SkinnedModelRenderer"
+              },
               "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/citizen_clothes/hair/eyelashes/models/eyelashes.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
@@ -261,20 +283,24 @@
           ]
         },
         {
-          "Id": "a01cc2fe-6a11-4162-a91e-008c1dc422a3",
+          "__guid": "a01cc2fe-6a11-4162-a91e-008c1dc422a3",
           "Name": "brows",
           "Position": "-328.7649,854.0304,1616.6",
           "Rotation": "-0.00000003846252,0.00000000000000003364404,-0.6452939,0.7639347",
           "Enabled": true,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "SkinnedModelRenderer",
-              "__enabled": true,
+              "__guid": "1b3196ef-0751-424f-8ec3-6f8e31480eee",
               "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "be2267ea-ef4e-459e-becc-0da1308f9da3",
+              "BoneMergeTarget": {
+                "_type": "component",
+                "component_id": "ca597d0d-ef47-435f-820e-888a548d0447",
+                "go": "be2267ea-ef4e-459e-becc-0da1308f9da3",
+                "component_type": "SkinnedModelRenderer"
+              },
               "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/citizen_clothes/hair/eyebrows_drawn/models/eyebrows_drawn.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
@@ -284,192 +310,223 @@
       ]
     },
     {
-      "Id": "bf864c94-ead3-49f2-9dca-11754e30b2f1",
+      "__guid": "bf864c94-ead3-49f2-9dca-11754e30b2f1",
       "Name": "Citizen - Ragdoll (1)",
       "Position": "1058.218,86.25329,-1558.662",
       "Rotation": "0.0000000384625,-0.00000000000000003364402,0.6452936,0.7639344",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "SkinnedModelRenderer",
-          "__enabled": true,
+          "__guid": "09031c9e-2bcf-40de-a32d-c801b7852e65",
           "BodyGroups": 18446744073709551615,
-          "BoneMergeTarget": null,
           "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "ModelPhysics",
-          "__enabled": true,
+          "__guid": "94eda542-27d5-4140-a6a9-2e271da797ce",
           "Locking": {},
           "Model": "models/citizen/citizen.vmdl",
-          "Renderer": "bf864c94-ead3-49f2-9dca-11754e30b2f1"
+          "Renderer": {
+            "_type": "component",
+            "component_id": "09031c9e-2bcf-40de-a32d-c801b7852e65",
+            "go": "bf864c94-ead3-49f2-9dca-11754e30b2f1",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RigidbodyFlags": 0
         }
       ]
     },
     {
-      "Id": "ac20e8ae-52c9-4886-be10-1ddd21d411ed",
+      "__guid": "ac20e8ae-52c9-4886-be10-1ddd21d411ed",
       "Name": "Citizen - Ragdoll (2)",
       "Position": "748.7832,138.7273,-1628.567",
       "Rotation": "0.438914,-0.5196109,0.4730311,0.5600006",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "SkinnedModelRenderer",
-          "__enabled": true,
+          "__guid": "f1c65e7b-f80d-43c3-b386-8b08f85c750f",
           "BodyGroups": 18446744073709551615,
-          "BoneMergeTarget": null,
           "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "ModelPhysics",
-          "__enabled": true,
+          "__guid": "5d8d93aa-54f9-4e4e-9bfc-7f643acc6db0",
           "Locking": {},
           "Model": "models/citizen/citizen.vmdl",
-          "Renderer": "ac20e8ae-52c9-4886-be10-1ddd21d411ed"
+          "Renderer": {
+            "_type": "component",
+            "component_id": "f1c65e7b-f80d-43c3-b386-8b08f85c750f",
+            "go": "ac20e8ae-52c9-4886-be10-1ddd21d411ed",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RigidbodyFlags": 0
         }
       ]
     },
     {
-      "Id": "4f5289dd-6f54-45dd-a3ff-a5eec3a36eb0",
+      "__guid": "4f5289dd-6f54-45dd-a3ff-a5eec3a36eb0",
       "Name": "Citizen - Ragdoll (3)",
       "Position": "1127.35,74.08727,-1617.981",
       "Rotation": "0.4210569,-0.4984705,0.4889933,0.5788964",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "SkinnedModelRenderer",
-          "__enabled": true,
+          "__guid": "1f8c2cc3-f49a-4c3e-8dee-acb1f275466f",
           "BodyGroups": 18446744073709551615,
-          "BoneMergeTarget": null,
           "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "ModelPhysics",
-          "__enabled": true,
+          "__guid": "be3457df-5d8a-4e50-bd15-8720ba8ffda6",
           "Locking": {},
           "Model": "models/citizen/citizen.vmdl",
-          "Renderer": "4f5289dd-6f54-45dd-a3ff-a5eec3a36eb0"
+          "Renderer": {
+            "_type": "component",
+            "component_id": "1f8c2cc3-f49a-4c3e-8dee-acb1f275466f",
+            "go": "4f5289dd-6f54-45dd-a3ff-a5eec3a36eb0",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RigidbodyFlags": 0
         }
       ]
     },
     {
-      "Id": "edd17d40-c132-44c5-82ff-012c048c8b45",
+      "__guid": "edd17d40-c132-44c5-82ff-012c048c8b45",
       "Name": "Citizen - Ragdoll (4)",
       "Position": "1222.347,50.74978,-1584.029",
       "Rotation": "0.0241932,-0.5881801,0.03322189,0.807685",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "SkinnedModelRenderer",
-          "__enabled": true,
+          "__guid": "b319849f-18f7-49d9-b173-9fcfec095755",
           "BodyGroups": 18446744073709551615,
-          "BoneMergeTarget": null,
           "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "ModelPhysics",
-          "__enabled": true,
+          "__guid": "5be33788-be13-42b8-9575-f3af61bc60b2",
           "Locking": {},
           "Model": "models/citizen/citizen.vmdl",
-          "Renderer": "edd17d40-c132-44c5-82ff-012c048c8b45"
+          "Renderer": {
+            "_type": "component",
+            "component_id": "b319849f-18f7-49d9-b173-9fcfec095755",
+            "go": "edd17d40-c132-44c5-82ff-012c048c8b45",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RigidbodyFlags": 0
         }
       ]
     },
     {
-      "Id": "3bf91bec-ba21-4df3-8b3b-1d3564306bdf",
+      "__guid": "3bf91bec-ba21-4df3-8b3b-1d3564306bdf",
       "Name": "Citizen - Ragdoll (5)",
       "Position": "1030.005,-91.9002,-1571.554",
       "Rotation": "-0.3722955,0.4407443,0.5270672,0.6239716",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "SkinnedModelRenderer",
-          "__enabled": true,
+          "__guid": "50fd840d-ea29-4273-b4e9-cb75995f6e4e",
           "BodyGroups": 18446744073709551615,
-          "BoneMergeTarget": null,
           "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "ModelPhysics",
-          "__enabled": true,
+          "__guid": "8adfdd94-6330-4fa6-9470-a65a4a053b91",
           "Locking": {},
           "Model": "models/citizen/citizen.vmdl",
-          "Renderer": "3bf91bec-ba21-4df3-8b3b-1d3564306bdf"
+          "Renderer": {
+            "_type": "component",
+            "component_id": "50fd840d-ea29-4273-b4e9-cb75995f6e4e",
+            "go": "3bf91bec-ba21-4df3-8b3b-1d3564306bdf",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RigidbodyFlags": 0
         }
       ]
     },
     {
-      "Id": "b3b5ece6-cd1b-4b4d-9b36-cc88982a751d",
+      "__guid": "b3b5ece6-cd1b-4b4d-9b36-cc88982a751d",
       "Name": "Spot Light",
       "Position": "1223.259,-803.9999,-1087.162",
       "Rotation": "-0.1064454,0.2939645,0.588666,0.7454708",
+      "Tags": "light_spot,light",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "SpotLight",
-          "__enabled": true,
+          "__guid": "efe21a8e-9428-41b6-95e4-53ae6b0455ea",
           "Attenuation": 1,
           "ConeInner": 71.55,
           "ConeOuter": 45.45,
           "Cookie": "materials/effects/lightcookie.vtex",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
           "LightColor": "197.47,197.47,197.47,1",
-          "Radius": 3000
+          "Radius": 3000,
+          "Shadows": true
         }
       ]
     },
     {
-      "Id": "758c906c-3278-4b4e-866a-99e0a7fc9737",
+      "__guid": "758c906c-3278-4b4e-866a-99e0a7fc9737",
       "Name": "Spot Light",
       "Position": "502.9799,219.0271,-1541.885",
       "Rotation": "0.003547103,0.005014129,-0.1381661,0.9903903",
+      "Tags": "light_spot,light",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "SpotLight",
-          "__enabled": true,
+          "__guid": "e0bc99af-3523-41ad-ac3d-c7b54b151d7c",
           "Attenuation": 1,
           "ConeInner": 71.55,
           "ConeOuter": 19.609886,
           "Cookie": "materials/effects/lightcookie.vtex",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
           "LightColor": "197.47,129.9001,72.3405,1",
-          "Radius": 3000
+          "Radius": 3000,
+          "Shadows": true
         }
       ]
     },
     {
-      "Id": "eed1d0da-fb94-44c7-b17b-638cddf71838",
+      "__guid": "eed1d0da-fb94-44c7-b17b-638cddf71838",
       "Name": "Cubemap",
       "Position": "1099.505,-0.0033,-1162.002",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "EnvmapProbe",
-          "__enabled": true,
+          "__guid": "b296a95f-7953-45ac-94ae-290b250eeec9",
           "Bounds": {
             "Mins": "-5120,-5120,-5120",
             "Maxs": "5120,5120,5120"
@@ -482,24 +539,27 @@
       ]
     },
     {
-      "Id": "62c9abb3-c5a7-4717-8787-8f85f0c989b7",
+      "__guid": "62c9abb3-c5a7-4717-8787-8f85f0c989b7",
       "Name": "Player",
       "Position": "1185.693,375.8237,-1585.303",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "PlayerController",
-          "__enabled": true,
-          "AnimationHelper": null,
-          "Body": null,
-          "Eye": "0be956d0-5ab7-4de9-8ad7-301e2959034d",
+          "__guid": "ece8e546-a28a-4a94-94c1-e9cf700d2277",
+          "Eye": {
+            "_type": "gameobject",
+            "go": "0be956d0-5ab7-4de9-8ad7-301e2959034d"
+          },
           "FirstPerson": true,
           "Gravity": "0,0,800"
         },
         {
           "__type": "CharacterController",
-          "__enabled": true,
+          "__guid": "1b726322-8720-4304-a3fa-c900e426f349",
           "Acceleration": 10,
+          "Bounciness": 0.3,
           "GroundAngle": 45,
           "Height": 64,
           "IgnoreLayers": "",
@@ -508,305 +568,323 @@
         },
         {
           "__type": "PlayerGrabber",
-          "__enabled": true,
-          "DecalEffect": "effects/decal_bullet_default.prefab",
-          "ImpactEffect": "effects/impact_default.prefab",
+          "__guid": "0d620eee-4723-41b8-aaf2-1af27dea58fa",
+          "DecalEffect": {
+            "_type": "gameobject",
+            "prefab": "effects/decal_bullet_default.prefab"
+          },
+          "ImpactEffect": {
+            "_type": "gameobject",
+            "prefab": "effects/impact_default.prefab"
+          },
+          "MovementSmoothness": 3,
           "ShootDamage": 9
         }
       ],
       "Children": [
         {
-          "Id": "0be956d0-5ab7-4de9-8ad7-301e2959034d",
+          "__guid": "0be956d0-5ab7-4de9-8ad7-301e2959034d",
           "Name": "Eye",
           "Position": "0,0,58",
-          "Enabled": true
+          "Enabled": true,
+          "NetworkMode": 2
         }
       ]
     },
     {
-      "Id": "e8974f53-8b6d-4324-8d3e-32395dfab214",
+      "__guid": "e8974f53-8b6d-4324-8d3e-32395dfab214",
       "Name": "Cube",
       "Position": "1055.814,-52.17136,-1614.12",
       "Scale": "0.5,0.5,0.5",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__enabled": true,
+          "__guid": "2012f058-347e-4f60-a876-f2e8b1036d80",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "BoxCollider",
-          "__enabled": true,
+          "__guid": "60b0f96a-3f37-4c4e-b384-86b558bb4f42",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
         },
         {
           "__type": "Rigidbody",
-          "__enabled": true,
+          "__guid": "b058f12d-354b-4aae-ac4b-cdf46f3cf4df",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
           "StartAsleep": false
         }
       ]
     },
     {
-      "Id": "8a0a380d-d013-4fb5-bcb7-e59d0a5cfe77",
+      "__guid": "8a0a380d-d013-4fb5-bcb7-e59d0a5cfe77",
       "Name": "Cube (1)",
       "Position": "1022.671,-48.94861,-1614.12",
       "Scale": "0.5,0.5,0.5",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__enabled": true,
+          "__guid": "0282a419-bcb0-47ee-a1db-893c3e2d26ad",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "BoxCollider",
-          "__enabled": true,
+          "__guid": "b480c0d6-eced-4be2-8373-b7b444337a8b",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
         },
         {
           "__type": "Rigidbody",
-          "__enabled": true,
+          "__guid": "64380273-07a9-4906-b775-2d18a866c587",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
           "StartAsleep": false
         }
       ]
     },
     {
-      "Id": "804c191b-b8a5-41a2-a826-5ae505768076",
+      "__guid": "804c191b-b8a5-41a2-a826-5ae505768076",
       "Name": "Cube (2)",
       "Position": "1029.781,-87.61106,-1614.12",
       "Scale": "0.5,0.5,0.5",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__enabled": true,
+          "__guid": "f4372641-6a12-42e9-a320-4450a104f094",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "BoxCollider",
-          "__enabled": true,
+          "__guid": "1cdbd595-2cda-416f-b667-553a105c9db5",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
         },
         {
           "__type": "Rigidbody",
-          "__enabled": true,
+          "__guid": "adb14b34-e581-47e8-aebb-7385e88a7354",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
           "StartAsleep": false
         }
       ]
     },
     {
-      "Id": "d91a8500-092c-47b0-a826-2e050f60ae9d",
+      "__guid": "d91a8500-092c-47b0-a826-2e050f60ae9d",
       "Name": "Cube (4)",
       "Position": "1094.43,-87.61106,-1614.12",
       "Scale": "0.2,0.2,0.2",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__enabled": true,
+          "__guid": "f80d64b7-8fc2-4c70-9b25-6fd663cf54e5",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "BoxCollider",
-          "__enabled": true,
+          "__guid": "5f6eb225-acba-4a1c-af33-e69413fa2380",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
         },
         {
           "__type": "Rigidbody",
-          "__enabled": true,
+          "__guid": "b554d100-bcf3-410f-bc47-8ff2dba615c2",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
           "StartAsleep": false
         }
       ],
       "Children": [
         {
-          "Id": "b5999158-436a-46d0-807a-a30cf0dff7c0",
+          "__guid": "b5999158-436a-46d0-807a-a30cf0dff7c0",
           "Name": "Cube (5)",
           "Position": "0,38.90115,0",
           "Scale": "0.7,0.7,0.7",
           "Enabled": true,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "ModelRenderer",
-              "__enabled": true,
+              "__guid": "25496125-c3fe-4e3f-929e-b91894233935",
               "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
             {
               "__type": "BoxCollider",
-              "__enabled": true,
+              "__guid": "bb3f8b64-edd3-4b6e-9122-9636489a01c4",
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
+              "Static": false
             }
           ]
         },
         {
-          "Id": "7cdf34db-7f50-41e2-b2b5-277ce3516257",
+          "__guid": "7cdf34db-7f50-41e2-b2b5-277ce3516257",
           "Name": "Cube (5)",
           "Position": "0,72.50615,0",
           "Scale": "0.7,0.7,0.7",
           "Enabled": true,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "ModelRenderer",
-              "__enabled": true,
+              "__guid": "9f43b033-1413-4f17-89dc-69b68a564b0e",
               "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
               "Model": "models/dev/box.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
             },
             {
               "__type": "BoxCollider",
-              "__enabled": true,
+              "__guid": "d41af3a2-8eaf-4197-8727-3ae3bdbef2f2",
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
+              "Static": false
             }
           ]
         },
         {
-          "Id": "0ed88d91-76a3-4f6f-bf45-ffca94122278",
+          "__guid": "0ed88d91-76a3-4f6f-bf45-ffca94122278",
           "Name": "Spot Light",
           "Position": "5.011324,-9.949177,-0.000002450396",
           "Rotation": "-0.00000004497722,0.000000000000000938268,-0.7545925,0.6561928",
+          "Tags": "light_spot,light",
           "Enabled": true,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "SpotLight",
-              "__enabled": true,
+              "__guid": "7d3f44e8-b43b-4eec-854f-7aaaea6e8bc8",
               "Attenuation": 1,
               "ConeInner": 29.07,
               "ConeOuter": 20.01,
               "Cookie": "materials/effects/lightcookie.vtex",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
               "LightColor": "89.15264,95.65646,97.57,1",
-              "Radius": 500
+              "Radius": 500,
+              "Shadows": true
             }
           ]
         }
       ]
     },
     {
-      "Id": "bface9b1-3b37-4e7c-b9b3-4614ee90ab86",
+      "__guid": "bface9b1-3b37-4e7c-b9b3-4614ee90ab86",
       "Name": "Cube (3)",
       "Position": "1041.134,-48.00087,-1583.879",
       "Scale": "0.5,0.5,0.5",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
-          "__enabled": true,
+          "__guid": "8e73ae30-c18a-4889-9e4a-dcd4d985c631",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "BoxCollider",
-          "__enabled": true,
+          "__guid": "47b878bf-9682-4cd7-af7a-f06a48c411f6",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
         },
         {
           "__type": "Rigidbody",
-          "__enabled": true,
+          "__guid": "95d075bb-250d-4a9a-b31a-9093f62efeb4",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
           "StartAsleep": false
         }
       ]
     },
     {
-      "Id": "ba152c4b-affa-4ecf-a32b-f2b56cee18ca",
+      "__guid": "ba152c4b-affa-4ecf-a32b-f2b56cee18ca",
       "Name": "trolley",
       "Position": "1196.317,49.90942,-1620.06",
       "Rotation": "-0.01919761,0,0.9998157,0",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelPhysics",
-          "__enabled": true,
+          "__guid": "83de25ac-a6bc-45dc-8e11-c42e4977e222",
           "Locking": {},
           "Model": "models/sbox_props/trolley/trolley.vmdl",
-          "Renderer": "ba152c4b-affa-4ecf-a32b-f2b56cee18ca"
+          "Renderer": {
+            "_type": "component",
+            "component_id": "58fba18f-7af4-4a67-885f-4701ba9c17ba",
+            "go": "ba152c4b-affa-4ecf-a32b-f2b56cee18ca",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RigidbodyFlags": 0
         },
         {
           "__type": "SkinnedModelRenderer",
-          "__enabled": true,
+          "__guid": "58fba18f-7af4-4a67-885f-4701ba9c17ba",
           "BodyGroups": 18446744073709551615,
-          "BoneMergeTarget": null,
           "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/sbox_props/trolley/trolley.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -821,10 +899,25 @@
     "NetworkFrequency": 60,
     "ThreadedAnimation": true,
     "TimeScale": 1,
-    "UseFixedUpdate": true
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
   },
   "Title": "Physics.Ragdoll",
   "Description": "Ragdoll spawning",
+  "LastSaved": "2024-03-20T12:48:22.7677694-05:00",
+  "ResourceVersion": 1,
+  "__version": 1,
   "__references": [
     "facepunch.trolley"
   ]
