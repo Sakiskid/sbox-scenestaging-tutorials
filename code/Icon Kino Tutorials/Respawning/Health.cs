@@ -8,11 +8,13 @@ namespace IconKino.Tuts.Respawning;
 public sealed class Health : Component, Component.ITriggerListener
 {
 	[Category("References")] [Property] public TextRenderer HealthText { get; set; }
-	[Category("Health")] [Property] public int CurrentHealth { get; set; } = 100;
+	[Category( "Health" )] [Property] public int StartingHealth { get; set; } = 100;
+	[Category( "Health" )] [Property] public int CurrentHealth { get; set; }
 
 	protected override void OnStart()
 	{
 		base.OnStart();
+		CurrentHealth = StartingHealth;
 		UpdateHealthText();
 	}
 
@@ -35,6 +37,12 @@ public sealed class Health : Component, Component.ITriggerListener
 		return damage;
 	}
 
+	public void SetToFullHealth()
+	{
+		CurrentHealth = StartingHealth;
+		UpdateHealthText();
+	}
+
 	private void UpdateHealthText()
 	{
 		HealthText.Text = $"Current HP: {CurrentHealth}";
@@ -44,10 +52,5 @@ public sealed class Health : Component, Component.ITriggerListener
 	{
 		Components.Get<Ragdoll>(FindMode.EverythingInSelf).EnableRagdoll();
 		Components.Get<DropWeapon>(FindMode.EverythingInSelf).Drop();
-	}
-
-	private void Respawn()
-	{
-		
 	}
 }

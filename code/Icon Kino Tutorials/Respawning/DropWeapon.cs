@@ -9,18 +9,33 @@ namespace IconKino.Tuts.Respawning;
 public sealed class DropWeapon : Component
 {
 	[Property] public GameObject WeaponToDrop { get; set; }
-	protected override void OnUpdate()
+	
+	private GameObject startingParent;
+	private Vector3 startingLocalPosition;
+	private Rotation startingLocalRotation;
+	private Rigidbody rb;
+	
+	protected override void OnStart()
 	{
-		if ( Input.Pressed( "Attack1" ) )
-		{
-			Drop();
-		}		
+		base.OnStart();
+		rb = WeaponToDrop.Components.Get<Rigidbody>(FindMode.EverythingInSelf);
+		startingParent = WeaponToDrop.Parent;
+		startingLocalPosition = WeaponToDrop.Transform.LocalPosition;
+		startingLocalRotation = WeaponToDrop.Transform.LocalRotation;
 	}
 
 	public void Drop()
 	{
 		WeaponToDrop.SetParent(Scene.Root);
-		WeaponToDrop.Components.TryGet<Rigidbody>( out Rigidbody rb, FindMode.EverythingInSelf );
 		rb.Enabled = true;
 	}
+
+	public void Reset()
+	{
+		WeaponToDrop.SetParent(startingParent);
+		rb.Enabled = false;
+		WeaponToDrop.Transform.LocalPosition = startingLocalPosition;
+		WeaponToDrop.Transform.LocalRotation = startingLocalRotation;
+	}
+	
 }

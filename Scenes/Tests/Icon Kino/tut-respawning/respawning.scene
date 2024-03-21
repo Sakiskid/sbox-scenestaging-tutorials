@@ -650,7 +650,7 @@
         {
           "__type": "Fire",
           "__guid": "8b4061e3-ec55-47c4-a0b6-44359d2a7bfd",
-          "fireDamage": 35
+          "fireDamage": 70
         }
       ]
     },
@@ -1582,20 +1582,6 @@
           "Static": false
         },
         {
-          "__type": "ModelPhysics",
-          "__guid": "76a0eb1b-4666-4f62-98d4-bbd5ceeb1c41",
-          "__enabled": false,
-          "Locking": {},
-          "Model": "models/citizen/citizen.vmdl",
-          "Renderer": {
-            "_type": "component",
-            "component_id": "5afbcf14-0320-442a-a980-646b49893add",
-            "go": "7daff6f8-35a7-4fa6-9d2f-3c4e693af8d7",
-            "component_type": "SkinnedModelRenderer"
-          },
-          "RigidbodyFlags": 0
-        },
-        {
           "__type": "DropWeapon",
           "__guid": "38b65bdc-32ef-4ce6-b78d-63a641a63db3",
           "WeaponToDrop": {
@@ -1612,11 +1598,20 @@
             "component_id": "279463e0-5a58-495e-9eae-02fcbb648b37",
             "go": "0aabdc7b-7806-4744-845b-5b5335475764",
             "component_type": "TextRenderer"
-          }
+          },
+          "StartingHealth": 100
         },
         {
           "__type": "Ragdoll",
-          "__guid": "3d8be8a2-d338-43fe-8972-617716f60df3"
+          "__guid": "3d8be8a2-d338-43fe-8972-617716f60df3",
+          "Body": {
+            "_type": "gameobject",
+            "go": "7daff6f8-35a7-4fa6-9d2f-3c4e693af8d7"
+          }
+        },
+        {
+          "__type": "PlayerInput",
+          "__guid": "890c3dd3-7afb-4fd0-99c7-7e4a7cd15b5e"
         }
       ],
       "Children": [
@@ -1635,6 +1630,20 @@
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelPhysics",
+              "__guid": "3aa3f3b0-797d-4f3f-9060-c74a50c30888",
+              "__enabled": false,
+              "Locking": {},
+              "Model": "models/citizen/citizen.vmdl",
+              "Renderer": {
+                "_type": "component",
+                "component_id": "5afbcf14-0320-442a-a980-646b49893add",
+                "go": "7daff6f8-35a7-4fa6-9d2f-3c4e693af8d7",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "RigidbodyFlags": 0
             }
           ],
           "Children": [
@@ -2758,6 +2767,24 @@
           "Static": false
         }
       ]
+    },
+    {
+      "__guid": "2436a720-d46b-499a-b4dc-396a6236ca2e",
+      "Name": "Cube",
+      "Position": "-579.8243,257.4456,-180.8504",
+      "Scale": "0.5,0.5,1",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "0e743e41-428d-4a33-bd67-f6b6df495f5d",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "0.01817,0.3224,0.3907,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -2783,7 +2810,7 @@
   },
   "Title": "Particle Emitters",
   "Description": "Showing different emitter components",
-  "LastSaved": "2024-03-20T12:53:59.1748857-05:00",
+  "LastSaved": "2024-03-21T09:25:19.8664037-05:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [
